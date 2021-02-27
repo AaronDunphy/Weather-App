@@ -16,7 +16,7 @@ export default function Forecast(props: ForecastProps) {
           : moment(props.forecast.applicable_date).format("dddd")}
       </h2>
       <img
-        src={`/static/img/weather/${props.forecast.weather_state_abbr}.svg`}
+        src={`${process.env.REACT_APP_META_WEATHER_URL}/static/img/weather/${props.forecast.weather_state_abbr}.svg`}
         alt={props.forecast.weather_state_name}
         className="weather-icon"
       />
