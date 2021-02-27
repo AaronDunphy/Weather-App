@@ -1,3 +1,3 @@
 # Weather App
 
-This app was built using React, React Hooks, Typescript and Meta Weather API.
+This app was built using React, Hooks, TypeScript and talks to Meta Weather API via Netlify serverless functions.
