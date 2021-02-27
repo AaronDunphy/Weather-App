@@ -19,9 +19,9 @@ export default function WeatherHeader(props: WeatherHeaderProps) {
       setShowSearchResults(true);
       const timer = setTimeout(() => {
         axios
-          .get(`/api/location/search/?query=${searchQuery}`)
+          .get(`${process.env.REACT_APP_API_URL}?searchQuery=${searchQuery}`)
           .then((resp) => {
-            setLocations(resp.data);
+            setLocations(resp.data.locations);
           })
           .catch((error) => {
             console.log("error", error);

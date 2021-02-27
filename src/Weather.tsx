@@ -13,7 +13,11 @@ export default function Weather(props: WeatherProps) {
 
   useEffect(() => {
     axios
-      .get(`/api/location/${locationId}/`)
+      .get(`${process.env.REACT_APP_API_URL}`, {
+        params: {
+          location: locationId,
+        },
+      })
       .then((resp) => {
         setForecasts(resp.data.consolidated_weather);
       })
